@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+@font-face {
+    font-family: 'Rocko';
+    src: url('/fonts/RockoUltraFLF.ttf') format('truetype');
+}
+
+:root {
+    --fondo: #141921;
+    --shadow-white: drop-shadow(0 0 0.4rem #ffffff70);
+    --shadow-blue: drop-shadow(0 0 0.6rem rgba(59, 130, 246, .5));
+}
+
+.body {
+    background: var(--fondo);
+}
+
+.container {
+    padding-top: 5rem;
+    color: #fff;
+}
+
+.container .nombre {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem;
+}
+
+.container .nombre h1 {
+    font-family: 'Rocko', sans-serif;
+    font-size: 70px;
+    overflow: hidden;
+}
+
+.container .nombre h2 {
+    font-family: 'Rocko', sans-serif;
+    font-size: 50px;
+    margin-top: -2rem;
+}
+
+.container .nombre img {
+    width: 90px;
+    margin-bottom: 3rem;
+}
+
+.container .nombre .blanco {
+    filter: var(--shadow-white);
+}
+
+.container .nombre .color {
+    filter: var(--shadow-blue);
+    background: linear-gradient(160deg, #0093E9 0%, #80D0C7 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
