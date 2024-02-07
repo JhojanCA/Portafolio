@@ -24,24 +24,16 @@ class navbarJC extends HTMLElement {
                     <div class="d-flex">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Inicio
-                                </a>
+                                <a class="nav-link" href="#">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fa-solid fa-server"></i> Servicios
-                                </a>
+                                <a class="nav-link" href="#experiencia">Experiencia</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fa-solid fa-chalkboard-user"></i> Proyectos
-                                </a>
+                                <a class="nav-link" href="#proyectos">Proyectos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    <i class="fa-solid fa-phone-volume"></i> Contacto
-                                </a>
+                                <a class="nav-link" href="#">Contacto</a>
                             </li>
                         </ul>
                     </div>

@@ -22,6 +22,8 @@
     --card-discord: #bce8ff;
     --card-perfil: #e0f5ff;
     --card-activo: #16a34a;
+    --linkedin: #0284c7;
+    --github: #d2d4d7;
 }
 
 .body {
@@ -67,6 +69,27 @@
     background: linear-gradient(160deg, #0093E9 0%, #80D0C7 60%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.nombre .btn {
+    font-family: 'Rocko', sans-serif;
+    border: 2px solid #41464d;
+    margin-right: 0.4rem;
+    transition: all .2s ease-out;
+}
+
+.nombre .btn:hover {
+    box-shadow: 0px 0px 0px 4px #41464d;
+}
+
+.nombre .linkedin,
+.nombre .btn.linkedin:hover {
+    color: var(--linkedin);
+}
+
+.nombre .github,
+.nombre .btn.github:hover {
+    color: var(--github);
 }
 
 .container .perfil {
@@ -177,4 +200,165 @@
     background: var(--card-discord);
     color: #141921;
     margin: 0.1rem;
+}
+
+
+
+
+
+/* ------------------------------------ EXPERIENCIA ---------------------------------------------- */
+
+.section {
+    min-height: 100vh;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px 0;
+    background-color: var(--fondo);
+    font-family: 'Rubik', sans-serif;
+}
+
+.section .blanco {
+    color: #fff;
+    font-family: 'Rocko', sans-serif;
+    font-size: 50px;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.timeline {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.timeline ul {
+    list-style: none;
+}
+
+.timeline ul li {
+    padding: 20px;
+    background-color: var(--card-perfil);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.timeline ul li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-content h1 {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.timeline-content h3 {
+    color: var(--card-perfil);
+}
+
+.timeline-content p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.timeline-content .date {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 768px) {
+    .timeline:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+        background-color: gray;
+    }
+
+    .timeline ul li {
+        width: 50%;
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    .timeline ul li:nth-child(odd) {
+        float: left;
+        clear: right;
+        transform: translateX(-30px);
+        border-radius: 20px 0px 20px 20px;
+    }
+
+    .timeline ul li:nth-child(even) {
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+        border-radius: 0px 20px 20px 20px;
+    }
+
+    .timeline ul li::before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: gray;
+        top: 0px;
+        transition: all .2s ease-in-out;
+    }
+
+    .timeline ul li:nth-child(odd)::before {
+        transform: translate(50%, -50%);
+        right: -30px;
+    }
+
+    .timeline ul li:nth-child(even)::before {
+        transform: translate(-50%, -50%);
+        left: -30px;
+    }
+
+    .timeline-content .date {
+        position: absolute;
+        top: -30px;
+    }
+
+    .timeline ul li:hover::before {
+        background-color: var(--card-discord);
+        transition: all .2s ease-in-out;
+    }
+}
+
+
+
+
+/* --------------------------------------- PROYECTOS ------------------------------------------ */
+
+.proyectos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 60px 0;
+    background-color: var(--fondo);
+    font-family: 'Rubik', sans-serif;
+}
+
+.proyectos .blanco {
+    color: #fff;
+    font-family: 'Rocko', sans-serif;
+    font-size: 50px;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
 }
