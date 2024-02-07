@@ -77,7 +77,7 @@ class navbarJC extends HTMLElement {
         }
 
         .navbar-nav {
-            margin-right: 6rem;
+            margin-right: 4rem;
         }
 
         .navbar-toggler {
@@ -93,7 +93,7 @@ class navbarJC extends HTMLElement {
             text-decoration: none;
             transition: all 0.2s ease;
             border-bottom: 2px solid transparent;
-            margin-inline: 10px;
+            margin-left: 1.2rem;
             cursor: pointer;
         }
 

@@ -5,10 +5,23 @@
     src: url('/fonts/RockoUltraFLF.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'GGSans';
+    src: url('/fonts/ggsans-Normal.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GGSans-bold';
+    src: url('/fonts/ggsans-ExtraBold.ttf') format('truetype');
+}
+
 :root {
     --fondo: #141921;
     --shadow-white: drop-shadow(0 0 0.4rem #ffffff70);
     --shadow-blue: drop-shadow(0 0 0.6rem rgba(59, 130, 246, .5));
+    --card-discord: #bce8ff;
+    --card-perfil: #e0f5ff;
+    --card-activo: #16a34a;
 }
 
 .body {
@@ -28,30 +41,140 @@
     padding: 5rem;
 }
 
-.container .nombre h1 {
+.nombre h1 {
     font-family: 'Rocko', sans-serif;
     font-size: 70px;
     overflow: hidden;
 }
 
-.container .nombre h2 {
+.nombre h2 {
     font-family: 'Rocko', sans-serif;
     font-size: 50px;
     margin-top: -2rem;
 }
 
-.container .nombre img {
+.nombre img {
     width: 90px;
     margin-bottom: 3rem;
 }
 
-.container .nombre .blanco {
+.nombre .blanco {
     filter: var(--shadow-white);
 }
 
-.container .nombre .color {
+.nombre .color {
     filter: var(--shadow-blue);
     background: linear-gradient(160deg, #0093E9 0%, #80D0C7 60%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.container .perfil {
+    padding: 1.2rem;
+}
+
+.perfil .discord {
+    width: 30vw;
+    height: 96vh;
+    display: block;
+    overflow: hidden;
+    filter: var(--shadow-blue);
+    background: var(--card-discord);
+    border-radius: 20px;
+}
+
+.discord .portada {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.discord .img-perfil {
+    position: relative;
+    width: 110px;
+}
+
+.discord .img-perfil img {
+    position: absolute;
+    width: 100%;
+    top: -55px;
+    padding: 0.4rem;
+    margin-left: 1rem;
+    background-color: var(--card-perfil);
+    border-radius: 50%;
+}
+
+.discord .img-perfil .activo {
+    position: absolute;
+    width: 10px;
+    bottom: -48px;
+    right: -8px;
+    padding: 0.5rem;
+    background-color: var(--card-activo);
+    border: 6px solid var(--card-perfil);
+    border-radius: 50px;
+}
+
+.discord section {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.discord section .emotes {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2rem;
+    right: 0;
+    margin-top: 1.4rem;
+    margin-inline: 2.5rem;
+    padding-inline: 0.4rem;
+    border-radius: 10px;
+    color: #141921;
+    background-color: var(--card-perfil);
+}
+
+.discord section .emotes img {
+    width: 20px;
+    margin-inline: 0.3rem;
+}
+
+.discord section .info {
+    width: 370px;
+    height: 420px;
+    margin-top: 4.5rem;
+    padding-block: 0.8rem;
+    padding-inline: 1.4rem;
+    border-radius: 10px;
+    color: #141921;
+    background-color: var(--card-perfil);
+    font-family: 'GGSans', sans-serif;
+}
+
+
+.info h5 {
+    font-family: 'GGSans-bold', sans-serif;
+}
+
+.info .title {
+    font-family: 'GGSans-bold', sans-serif;
+    font-size: 0.8rem;
+    color: #41464d;
+}
+
+.info p {
+    margin-block: 0.1rem;
+    color: #000;
+    font-size: 0.9rem;
+}
+
+.info .text-bg-discord {
+    background: var(--card-discord);
+    color: #141921;
+    margin: 0.1rem;
 }
