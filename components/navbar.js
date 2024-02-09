@@ -27,13 +27,13 @@ class navbarJC extends HTMLElement {
                                 <a class="nav-link" href="#">Inicio</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link" href="#about">Sobre mí</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="#experiencia">Experiencia</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#proyectos">Proyectos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contacto</a>
                             </li>
                         </ul>
                     </div>
