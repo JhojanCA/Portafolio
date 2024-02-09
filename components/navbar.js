@@ -8,7 +8,7 @@ class navbarJC extends HTMLElement {
     <nav id="navdata" class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a id="img2" class="navbar-brand" href="#">
-                <img src="/assets/logo.png" width="60">
+                <img src="../../assets/logo.png" width="60">
             </a>
             <button id="menu" class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">

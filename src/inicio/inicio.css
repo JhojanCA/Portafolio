@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: 'Rocko';
-    src: url('/fonts/RockoUltraFLF.ttf') format('truetype');
+    src: url('../../fonts/RockoUltraFLF.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'GGSans';
-    src: url('/fonts/ggsans-Normal.ttf') format('truetype');
+    src: url('../../fonts/ggsans-Normal.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'GGSans-bold';
-    src: url('/fonts/ggsans-ExtraBold.ttf') format('truetype');
+    src: url('../../fonts/ggsans-ExtraBold.ttf') format('truetype');
 }
 
 :root {
