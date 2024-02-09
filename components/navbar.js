@@ -47,13 +47,14 @@ class navbarJC extends HTMLElement {
 
         :root {
             --fondo: #141921;
+            --nav: rgba(20, 25, 33, 0.9);
         }
 
         .navbar {
             transition: .4s ease-in-out;
             position: fixed;
             width: 100%;
-            z-index: 9999;
+            z-index: 9998;
         }
 
         .box {
@@ -61,7 +62,8 @@ class navbarJC extends HTMLElement {
         }
 
         .bg-blue-dark {
-            background: var(--fondo);
+            background: var(--nav);
+            backdrop-filter: blur(10px); 
         }
 
         .navbar-brand {
@@ -74,7 +76,13 @@ class navbarJC extends HTMLElement {
 
         .navbar-toggler {
             border: none;
-            margin-inline: 1rem;
+            margin-inline: 4rem;
+            color: transparent;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url(/assets/menu-icon.png);
+            background-size: 140%;
         }
 
         .nav-link {
@@ -108,8 +116,31 @@ class navbarJC extends HTMLElement {
             transform: scaleX(1);
         }
 
+        .navbar .offcanvas {
+            background: var(--fondo);
+            height: max-content;
+        }
+        
+        .navbar .offcanvas .btn-close {
+            color: #fff;
+        }
+        
         .navbar .offcanvas-body .nav-link {
             color: #fff;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar-brand {
+                margin-left: 2rem;
+            }
+
+            .navbar-nav {
+                margin-right: 2rem;
+            }
+
+            .navbar-toggler {
+                margin-inline: 1rem;
+            }
         }
 
     </style>`;

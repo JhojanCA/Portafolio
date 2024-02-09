@@ -32,6 +32,8 @@
 }
 
 .container {
+    display: grid;
+    grid-template-columns: 60% 40%;
     padding-top: 5rem;
     color: #fff;
 }
@@ -40,25 +42,25 @@
     height: 80vh;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     flex-direction: column;
-    padding: 5rem;
+    padding-right: 2rem;
 }
+
 
 .nombre h1 {
     font-family: 'Rocko', sans-serif;
     font-size: 70px;
-    overflow: hidden;
 }
 
 .nombre h2 {
     font-family: 'Rocko', sans-serif;
     font-size: 50px;
-    margin-top: -2rem;
 }
 
 .nombre img {
-    width: 90px;
-    margin-bottom: 3rem;
+    width: 60px;
+    margin-bottom: 2rem;
 }
 
 .nombre .blanco {
@@ -98,13 +100,13 @@
 }
 
 .perfil .discord {
-    width: 30vw;
-    height: 98vh;
+    width: 100%;
     display: block;
     overflow: hidden;
     filter: var(--shadow-blue);
     background: var(--card-discord);
     border-radius: 20px;
+    padding-bottom: 1rem;
 }
 
 .discord .portada {
@@ -146,6 +148,7 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    padding-inline: 1rem;
 }
 
 .discord section .emotes {
@@ -169,8 +172,7 @@
 }
 
 .discord section .info {
-    width: 370px;
-    height: 420px;
+    width: 100%;
     margin-top: 4.5rem;
     padding-block: 0.8rem;
     padding-inline: 1.4rem;
@@ -207,6 +209,42 @@
 
 
 
+/* --------------------------------------- SOBRE MÍ -----==------------------------------------ */
+
+.about,
+.about .row>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about .blanco {
+    color: #fff;
+    font-family: 'Rocko', sans-serif;
+    font-size: 50px;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+.about img {
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.about p {
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: #a8a8a8;
+}
+
+.about p b {
+    color: #fff;
+}
+
+
+
+
 /* ------------------------------------ EXPERIENCIA ---------------------------------------------- */
 
 .section {
@@ -217,7 +255,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 100px 0;
+    padding-block: 4rem;
     background-color: var(--fondo);
     font-family: 'Rubik', sans-serif;
 }
@@ -276,100 +314,7 @@
     letter-spacing: 2px;
 }
 
-@media only screen and (min-width: 768px) {
-    .timeline:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 2px;
-        height: 100%;
-        background-color: gray;
-    }
 
-    .timeline ul li {
-        width: 50%;
-        position: relative;
-        margin-bottom: 50px;
-    }
-
-    .timeline ul li:nth-child(odd) {
-        float: left;
-        clear: right;
-        transform: translateX(-30px);
-        border-radius: 20px 0px 20px 20px;
-    }
-
-    .timeline ul li:nth-child(even) {
-        float: right;
-        clear: left;
-        transform: translateX(30px);
-        border-radius: 0px 20px 20px 20px;
-    }
-
-    .timeline ul li::before {
-        content: "";
-        position: absolute;
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        background-color: gray;
-        top: 0px;
-        transition: all .2s ease-in-out;
-    }
-
-    .timeline ul li:nth-child(odd)::before {
-        transform: translate(50%, -50%);
-        right: -30px;
-    }
-
-    .timeline ul li:nth-child(even)::before {
-        transform: translate(-50%, -50%);
-        left: -30px;
-    }
-
-    .timeline-content .date {
-        position: absolute;
-        top: -30px;
-    }
-
-    .timeline ul li:hover::before {
-        background-color: var(--card-discord);
-        transition: all .2s ease-in-out;
-    }
-}
-
-
-
-
-/* --------------------------------------- SOBRE MÍ -----==------------------------------------ */
-
-.about,
-.about .row>div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.about .blanco {
-    color: #fff;
-    font-family: 'Rocko', sans-serif;
-    font-size: 50px;
-    margin-top: 5rem;
-    margin-bottom: 1rem;
-}
-
-.about p {
-    font-family: 'Rubik', sans-serif;
-    font-size: 20px;
-    color: #a8a8a8;
-}
-
-.about p b {
-    color: #fff;
-}
 
 
 
@@ -378,7 +323,7 @@
 .proyectos {
     width: 100%;
     text-align: center;
-    padding-top: 4rem;
+    padding-top: 2rem;
 }
 
 .proyectos .blanco {
@@ -472,8 +417,6 @@
     font-size: 2.2rem;
 }
 
-.overlay .view i {}
-
 .overlay .badges {
     display: inline-flex;
     flex-wrap: wrap;
@@ -497,12 +440,199 @@
 }
 
 
-@media screen and (min-width: 600px) {
+
+
+@media screen and (max-width: 1200px) {
+    .nombre h1 {
+        font-size: 60px;
+    }
+
+    .nombre h2 {
+        font-size: 40px;
+    }
+
+    .discord section .emotes {
+        margin-inline: 1rem;
+    }
+
+    .discord section .emotes img {
+        width: 15px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .nombre h1 {
+        font-size: 55px;
+    }
+
+    .nombre h2 {
+        font-size: 35px;
+    }
+
+    .perfil .discord {
+        width: 130%;
+    }
+}
+
+@media screen and (min-width: 900px) {
     .card-tall {
         grid-row: span 2 / auto;
     }
 
     .card-wide {
         grid-column: span 2 / auto;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .container .nombre {
+        height: 50vh;
+        padding: 2rem;
+        margin-block: 4rem;
+    }
+
+    .perfil .discord {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .timeline:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+        background-color: gray;
+    }
+
+    .timeline ul li {
+        width: 50%;
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    .timeline ul li:nth-child(odd) {
+        float: left;
+        clear: right;
+        transform: translateX(-30px);
+        border-radius: 20px 0px 20px 20px;
+    }
+
+    .timeline ul li:nth-child(even) {
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+        border-radius: 0px 20px 20px 20px;
+    }
+
+    .timeline ul li::before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: gray;
+        top: 0px;
+        transition: all .2s ease-in-out;
+    }
+
+    .timeline ul li:nth-child(odd)::before {
+        transform: translate(50%, -50%);
+        right: -30px;
+    }
+
+    .timeline ul li:nth-child(even)::before {
+        transform: translate(-50%, -50%);
+        left: -30px;
+    }
+
+    .timeline-content .date {
+        position: absolute;
+        top: -30px;
+    }
+
+    .timeline ul li:hover::before {
+        background-color: var(--card-discord);
+        transition: all .2s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .proyectos .photo-grid {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-auto-rows: 200px;
+        padding-inline: 1rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .container .nombre {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nombre h1 {
+        font-size: 50px;
+    }
+
+    .nombre h2 {
+        font-size: 28px;
+    }
+
+    .nombre img {
+        width: 35px;
+        margin-bottom: 1rem;
+    }
+
+    .nombre .btn {
+        width: 100%;
+        margin-block: 0.4rem;
+    }
+
+    .about img {
+        width: 100%;
+    }
+
+    .overlay {
+        padding: 0.6rem;
+    }
+
+    .overlay p {
+        font-size: 0.7rem;
+    }
+
+    .overlay .view {
+        top: -20px;
+        padding-inline: 0.8rem;
+    }
+
+    .overlay .view a {
+        font-size: 1.4rem;
+    }
+
+    .overlay .badge {
+        height: 20px;
+        margin: 0.1rem;
+        font-size: 0.6rem;
+    }
+
+    .overlay .badge img {
+        width: 10px;
     }
 }
